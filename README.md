@@ -33,7 +33,7 @@
 
 ### 🧪 3. Canlı 4/4 Güvenlik Doğrulaması (`--selftest`)
 Uygulama içindeki **Güvenlik Testi** sekmesinden KenciBox'ın kendisini gerçek bir sıfır-yetkili AppContainer içinde çalıştırarak şu 4 katmanı canlı kanıtlayabilirsiniz:
-1. **Ağ / Loopback Engeli:** `127.0.0.1` yerel dinleyicisine bağlantının çekirdek tarafından `WSAEACCES (10013)` ile engellenmesi.
+1. **İnternet / Dış Ağ Engeli:** Yönlendirilemeyen RFC 5737 (`192.0.2.1:80`) bağlantısının çekirdek tarafından `WSAEACCES (10013)` ile engellenmesi (gerçek sunucuya çıkmaz, çevrimdışıyken de çalışır).
 2. **Kullanıcı Dizini Okuma Engeli:** Masaüstü ve `%LOCALAPPDATA%` okumasının `UnauthorizedAccessException` ile reddedilmesi.
 3. **Dış Dizin Yazma Engeli:** Ana `%TEMP%` ve Masaüstü yazımının engellenmesi.
 4. **Pano & Ortam Yalıtımı:** Pano okuma/yazmanın `ERROR_ACCESS_DENIED (5)` ile reddedilmesi ve hassas ortam değişkenlerinin gizlenmesi (`USERNAME=SandboxUser`).
