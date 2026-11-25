@@ -6,7 +6,7 @@
 ![Runtime](https://img.shields.io/badge/.NET-8.0%20WPF%20(Self--Contained)-512BD4?style=flat-square&logo=dotnet)
 ![Isolation](https://img.shields.io/badge/Sandbox-AppContainer%20%2B%20Windows%20Sandbox-10B981?style=flat-square)
 ![Privileges](https://img.shields.io/badge/Yetki-asInvoker%20(Y%C3%B6netici%20Gerekmez)-2563EB?style=flat-square)
-![Release](https://img.shields.io/badge/S%C3%BCr%C3%BCm-v1.0.1-38BDF8?style=flat-square)
+![Release](https://img.shields.io/badge/S%C3%BCr%C3%BCm-v1.0.3-38BDF8?style=flat-square)
 
 **KenciBox**, özellikle **itch.io** ve bağımsız (indie) kaynaklardan indirilen `.exe` oyunları ve uygulamaları, ana bilgisayarınıza (Masaüstü, Belgeler, tarayıcı verileri, `%APPDATA%`, yerel ağ ve pano) erişemeden güvenle oynayabilmeniz için geliştirilmiş modern bir **Windows 11 Oyun Kasası ve İzolasyon Başlatıcısıdır**.
 
@@ -47,7 +47,7 @@ Uygulama içindeki **Güvenlik Testi** sekmesinden KenciBox'ın kendisini gerçe
 
 ## 📦 Kurulum ve Kullanım
 
-1. [**Releases (v1.0.1)**](../../releases/tag/v1.0.1) sayfasından **`KenciBox-v1.0.1-win-x64.zip`** dosyasını indirin.
+1. [**Releases (v1.0.3)**](../../releases/tag/v1.0.3) sayfasından **`KenciBox-v1.0.3-win-x64.zip`** dosyasını indirin.
 2. Arşivi dilediğiniz bir klasöre çıkarın ve **`KenciBox.exe`** dosyasını çalıştırın (kurulum veya .NET Runtime indirmeniz gerekmez).
 3. Herhangi bir `.exe` dosyasını veya oyun klasörünü KenciBox penceresine sürükleyip bırakın.
 4. Sağdaki denetçiden çalışma modunu (**Hızlı Mod** veya **Tam Kilit**), **`.kbox` Çift-Tıklama Koruması**'nı ve gerekirse sınırlı yazma/ağ ayarlarını seçip **Başlat**'a tıklayın.
@@ -56,7 +56,7 @@ Uygulama içindeki **Güvenlik Testi** sekmesinden KenciBox'ın kendisini gerçe
 
 ## 🔍 Güvenlik Denetimi ve Sınırlar
 
-KenciBox, bağımsız kırmızı/mavi takım güvenlik denetiminden geçmiş; Mod B `.wsb` enjeksiyon/hijack, NTFS hardlink ACL yayılımı, UNC/ADS yol atlatmaları, TOCTOU yarış koşulları ve çökme kurtarma uç durumları kapatılarak **12/12 AV-güvenli güvenlik testi** ve **35/35 regresyon testi** ile doğrulanmıştır.
+KenciBox, iki turlu bağımsız kırmızı/mavi takım güvenlik denetiminden geçmiş; Mod B `.wsb` enjeksiyon/hijack & 24H2 devir takibi, NTFS hardlink ACL yayılımı, UNC/ADS/karma-eğik-çizgi yol atlatmaları, `.kbox` sahte klasör/junction engelleri, Low-IL Mutex squatting, TOCTOU yarış koşulları ve çökme kurtarma uç durumları kapatılarak **19/19 AV-güvenli güvenlik testi** ve **35/35 regresyon testi** ile doğrulanmıştır.
 
 Ayrıntılı yama tablosu ve Windows kullanıcı-modu (Mod A) doğal sınırları için [SECURITY_AUDIT_REPORT.md](SECURITY_AUDIT_REPORT.md) dosyasına bakabilirsiniz.
 
